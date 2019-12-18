@@ -1,0 +1,41 @@
+.chancethewrapper {
+    border: 4px solid #888888;
+    width: 60%;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: aqua;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+.card-header {
+    text-align: center;
+    font-weight: bold;
+}
+
+#password {
+    margin-left: 45px;
+    margin-bottom: 10px;
+}
+
+.form-check {
+    margin-left: 40px;
+}
+
+.char-length {
+    margin: 10px;
+}
+
+.input-box {
+    margin: 0px;
+}
+
+.bootun {
+    text-align: center;
+    margin: 10px auto;
+    margin-left: 25px;
+    width: 80%;
+}
