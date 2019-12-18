@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="looks.css"/>
+  </head>
+  <body>
+
+ <div class="chancethewrapper">
+
+      <header>
+        <h1>PASSWORD GENERATOR</h1>
+      </header>
+
+      <div class="card">
+
+        <div class="card-header"></div>
+
+        <div class="card-body">
+
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+
+          <form>
+            <div class="form-group row char-length">
+              <label class="col-sm-4 col-form-label">Length</label>
+              <div class="col-sm-8 input-box">
+                <input class="form-control" id="length">
+              </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Uppercase Letters
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Lowercase Letters
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Numbers
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Special Characters
+            </label>
+          </div>
+
+        </div>
+
+        <div class="card-footer">
+          <button id="generate" class="bootun">Generate</button>
+        </div>
+
+     </div>
+</div>
+
+    <script src="goodies.js"></script>
+
+  </body>
+</html>
