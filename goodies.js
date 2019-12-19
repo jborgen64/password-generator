@@ -6,6 +6,7 @@ var lowerCaseChk = document.getElementById("lower-chk");
 var numberChk = document.getElementById("number-chk");
 var supSpecChk = document.getElementById("sup-spec-chk");
 var passReturn = document.getElementById("gen-btn");
+var passDisplay = document.getElementById("password-dis");
 
 //variables for value sets
 
@@ -14,11 +15,20 @@ var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var number = "1234567890";
 var symbol = "!@#$%^&*()_+-=";
 
+//create a variable housing my functions
+
+var totalRandom = {
+    up: upperRandomReturn,
+    low: lowerRandomReturn,
+    num:  numberRandomReturn,
+    sym: symbolRandomReturn
+};
+
 //use javascript to show where value of slide is at
 
 var lengthDis = document.getElementById("length-dis");
 
-lengthDis.innerHTML = "Length: 128";
+lengthDis.innerHTML = "Length: 68";
 
 charLengthSlide.oninput = function(){
     if(charLengthSlide.value > 0){
@@ -26,9 +36,18 @@ charLengthSlide.oninput = function(){
     }
 }
 
-//create event listener for when boxes are checked/length specified
+//create event listener for when "generate" button is clicked/boxes are checked
 
+passReturn.addEventListener("click", function(){
+    var pwdLength = parseInt(charLengthSlide.value);
+    var chkdUpper = upperCaseChk.checked;
+    var chkdLower = lowerCaseChk.checked;
+    var chkdNumber = numberChk.checked;
+    var chkdSymbol = supSpecChk.checked;
 
+    passDisplay.innerText = generate(pwdLength, chkdUpper,chkdLower, chkdNumber, chkdSymbol);
+
+})
 
 //create functions that are returning random outputs from variables
 
@@ -48,31 +67,8 @@ function symbolRandomReturn() {
     return symbol.charAt(Math.floor(Math.random() * symbol.length))
 }
 
-//create a variable housing my functions
+//Function generating password
 
-var totalRandom = {
-    up: upperRandomReturn,
-    low: lowerRandomReturn,
-    num:  numberRandomReturn,
-    symbol: symbolRandomReturn
-};
-
-//create function returning random password
-
-function genPass(up,low,num,sym,length) {
-
-    //create variable for password
-    var pwd = "";
-
-    //create variable that counts checked items
-    var chkdCount = up + low + num + sym;
-
-console.log(chkdCount)
-
-}
-
-
-
-
+function g
 
 
