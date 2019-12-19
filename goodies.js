@@ -21,7 +21,7 @@ var totalRandom = {
     up: upperRandomReturn,
     low: lowerRandomReturn,
     num:  numberRandomReturn,
-    sym: symbolRandomReturn
+    sym: symbolRandomReturn,
 };
 
 //use javascript to show where value of slide is at
@@ -45,8 +45,8 @@ passReturn.addEventListener("click", function(){
     var chkdNumber = numberChk.checked;
     var chkdSymbol = supSpecChk.checked;
 
-    passDisplay.innerText = generate(pwdLength, chkdUpper,chkdLower, chkdNumber, chkdSymbol);
-
+//specs for values of "generate"
+    generate(pwdLength, chkdUpper, chkdLower, chkdNumber, chkdSymbol);
 })
 
 //create functions that are returning random outputs from variables
@@ -69,6 +69,28 @@ function symbolRandomReturn() {
 
 //Function generating password
 
-function g
+function generate(pwdLength, up, low, num, sym,) {
+    var pwd = "";
+    //counts how many boxes are checked
+    var criteriaCount = up + low + num + sym;
+    //checks which (true/false) checkboxes are checked + filter out false return
+    var criteriaArray = [{up}, {low}, {num} ,{sym}].filter(items => Object.values(items)[0])
+    //return nothing if no criteria is selected
+    if(criteriaCount === 0) {
+        return "";
+    }
+    //loop through the criteria array objects
+    for(var i = 0; i < pwdLength; i += criteriaCount) {
+        criteriaArray.forEach(criteria => {
+            var funcName = Object.keys(criteria)[0];
+
+    
+            pwd += totalRandom[funcName]();
+        });
+    }
+    passDisplay.innerText = pwd;
+}
+
+
 
 
