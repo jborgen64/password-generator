@@ -1,41 +1,60 @@
-.chancethewrapper {
-    border: 4px solid #888888;
-    width: 60%;
-    margin: 60px auto;
+body {
+    background-color: lightcyan;
+}
+.navvy {
+    margin-bottom: 40px;
+    border-bottom: 2px solid lightseagreen;
+    background-color: lightpink;
+}
+
+.length-container {
+    border: 4px solid lightseagreen;
+    background-color: lightgrey;
     padding: 20px;
-    background-color: aqua;
-
 }
 
-h1 {
-    text-align: center;
+.length {
+    font-size: 20px;
 }
 
-.card-header {
-    text-align: center;
-    font-weight: bold;
+#slidey-guy {
+    width: 90%;
+    margin-left: 20px;
+}
+
+.lumn {
+    border: 4px solid lightseagreen;
+    background-color: lightgrey;
+}
+
+.chk-box {
+    margin: 20px;
+}
+
+#gen-btn {
+    height: 90%;
+    margin: 10px auto;
+    background-color: lightpink;
+}
+
+.pass-return {
+    border: 4px solid lightseagreen;
+    padding: 20px;
+    background-color: lightgrey;
 }
 
 #password {
-    margin-left: 45px;
-    margin-bottom: 10px;
-}
-
-.form-check {
-    margin-left: 40px;
-}
-
-.char-length {
-    margin: 10px;
-}
-
-.input-box {
-    margin: 0px;
-}
-
-.bootun {
-    text-align: center;
-    margin: 10px auto;
+    width: 90%;
     margin-left: 25px;
-    width: 80%;
+    height: 30px;
 }
+
+.footy {
+    margin-top: 40px;
+    border-top: 2px solid lightseagreen;
+    background-color: lightpink;
+    height: 50px;
+}
+
+
+
