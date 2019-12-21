@@ -84,10 +84,11 @@ function generate(pwdLength, up, low, num, sym,) {
         criteriaArray.forEach(criteria => {
             var funcName = Object.keys(criteria)[0];
 
-    
+            //appends function values to the empty string of "pwd"
             pwd += totalRandom[funcName]();
         });
     }
+    //displays final password :)
     passDisplay.innerText = pwd;
 }
 
